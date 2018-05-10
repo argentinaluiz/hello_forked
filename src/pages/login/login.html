@@ -1,0 +1,59 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      <button ion-button clear larg navPop>
+      </button>
+      <div align="center" style="color: #FFFFFF; margin-top: -35px; margin-bottom: 10px; margin-left: -10px;"><ion-icon style="font-size: 20px;" class="ion-nuclear" md="md-globe"></ion-icon><strong> &nbsp;&nbsp; LOGIN</strong></div>
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!-- Cadastro endereçoc -->
+  <form [formGroup]="form">
+
+    <ion-card>
+      <ion-card-header>
+        <div style="color: #ffffff; background-color: #d70000; border-radius: 3px; padding-top: 10px; padding-bottom: 10px;" align="center">LOGIN GUARDIAN</div>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-list>
+
+          <ion-item>
+            <ion-label floating>Email:</ion-label>
+            <ion-input minlength="3" [(ngModel)]="email" formControlName="email" value="overgil@bol.com.br" name="email" required></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label floating>Senha:</ion-label>
+            <ion-input [(ngModel)]="password" formControlName="password" type="password" value="100684" name="password"></ion-input>
+          </ion-item>
+
+
+        </ion-list>
+        <br/><br/><br/>
+
+        <div padding>
+          <button ion-button color="danger" block (click)="login()">
+            <ion-icon style="font-size: 20px;" class="ion-locked" md="md-globe" block></ion-icon> &nbsp;&nbsp; Logar
+          </button>
+        </div>
+
+        <br/><br/>
+        <div padding>
+          <button ion-button color="danger" block >
+            <ion-icon style="font-size: 20px;" class="ion-locked" md="md-globe" block></ion-icon> &nbsp;&nbsp; Esqueci a Senha
+          </button>
+        </div>
+        <br/><br/><br/><br/><br/><br/>
+
+      </ion-card-content>
+    </ion-card>
+
+  </form>
+  <!-- Fim Cadastro endereço -->
+
+</ion-content>

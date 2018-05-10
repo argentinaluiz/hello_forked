@@ -1,0 +1,51 @@
+page-home {
+
+  ion-content {
+    //background: #000000 !important;
+    background: url("../assets/imagens/bac.jpg") !important;
+    background-size:100%;
+  }
+  .menus {
+    background: #d70000 !important;
+    color: #1B1B1B;
+  }
+
+  .icones {
+    margin-top: 7px;
+    margin-bottom: 5px;
+  }
+
+}
+
+
+/*
+body, ion-content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #009688;
+
+  background: url("../assets/imagens/bg-pattern.png"), #009688 ;
+  /* fallback for old browsers */
+  //background: url("../assets/imagens/bg-pattern.png"), -webkit-linear-gradient(to top, #FFFFF0 , #003300);
+  /* Chrome 10-25, Safari 5.1-6 */
+  //background: url("../assets/imagens/bg-pattern.png"), linear-gradient(to top, #FFFFF0, #003300);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  //color: #009688;
+
+//} // */
+
+
+ion-icon {
+  font-size: 70px;
+  cursor: pointer;
+}
+
+i {
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.toolbar-background {
+  background-color: #d70000;
+}

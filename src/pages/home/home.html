@@ -1,0 +1,104 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title><!-- B</strong><img src="assets/imagens/biz.png" width="14px;"><strong>ZÚ TRÂNSITO</strong> -->
+      <button ion-button menuToggle>
+        <ion-icon name="menu" style="color: #ffffff;" ></ion-icon>
+      </button>
+      <div align="center" style="color: #FFFFFF; margin-top: -28px; margin-bottom: 10px; margin-left: 10px;"><strong><ion-icon style="font-size: 20px;" class="ion-nuclear" md="md-globe"></ion-icon>&nbsp;&nbsp; GUARDIAN</strong></div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <br/>
+  <ion-row>
+
+    <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 (click)="disp()">
+      <div block style="border-radius: 5px; margin-top: auto; padding-bottom: 10px; text-align: center;" class="menus">
+        <!--<ion-icon ios="ios-list-box" md="md-alert" class="icones"></ion-icon>-->
+        <i class="ion-ios-alarm" md="md-people"></i>
+        <br/>
+        <div style="color:#CCCCCC; padding-bottom: 10px;"><strong>DISP</strong></div>
+      </div>
+    </ion-col>
+
+  </ion-row>
+
+
+
+</ion-content>
+
+
+<ion-footer style="background-color: #d70000; color:#FFFFFF;"><br/>
+  <div align="center"> <strong>© Copyright Guardians V. BETA</strong></div><br/>
+</ion-footer>
+
+<ion-menu [content]="content">
+
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title><div style="color: #ffffff;" align="left" ion-button menuToggle><ion-icon style="font-size: 20px;" class="ion-nuclear" md="md-globe"></ion-icon> PESQUISAS</div></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+
+    <ion-item (click)="pesquisa_abordagem()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/abordagem.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Abordagem</p>
+    </ion-item>
+
+    <ion-item (click)="pesquisa_pontoFoco()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/ponto_foco.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Ponto Foco</p>
+    </ion-item>
+
+    <ion-item (click)="pesquisa_roupa()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/roupas.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Vestes</p>
+    </ion-item>
+
+    <ion-item (click)="pesquisa_suspeitoBairro()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/suspeito.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Suspeito Bairros</p>
+    </ion-item>
+
+    <ion-item (click)="pesquisa_tatuagem()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/tatuagem.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Tatuagens</p>
+    </ion-item>
+
+    <ion-item (click)="pesquisa_veiculo()">
+      <ion-avatar item-start>
+        <img src="assets/botoes/veiculo.png">
+      </ion-avatar>
+      <h2>Pesquisa</h2>
+      <p>Veículos</p>
+    </ion-item>
+
+    <ion-list>
+
+      <ion-footer style="background-color: #d70000; color:#FFFFFF;"><br/>
+        <div align="center"> <strong>© Copyright Guardians V. 0.0.1</strong></div><br/>
+      </ion-footer>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>
+

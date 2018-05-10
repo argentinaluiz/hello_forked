@@ -1,0 +1,52 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>
+      <button ion-button clear larg navPop>
+        <div class="ion ion-ios-arrow-back" style="color: #FFFFFF; font-size: 40px;" ></div>
+      </button>
+      <div align="center" style="color: #FFFFFF; margin-top: -35px; margin-bottom: 10px; margin-left: 40px;"><i class="ion ion-ios-compose-outline" style="margin-right: 10px; font-size: 20px !important;"></i><strong>ABORDADOS</strong></div>
+      <!--<ion-searchbar placeholder="Busca" (ionInput)="getItems($event)"></ion-searchbar>-->
+    </ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngIf="data == 'N' || ''">
+    <img src="assets/imgs/internet.jpg"/>
+    <ion-card-content>
+      <ion-card-title>
+        SEM ACESSO
+      </ion-card-title>
+      <p>
+        VERIFIQUE SUA CONEXÇÃO COM A INTERNET PARA USAR ESTE SERVIÇO.
+      </p>
+      <hr/>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngFor="let user of users">
+
+    <ion-card>
+      <img src="{{urlimg}}/assets/img_marginais/{{user.foto}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{user.nome | uppercase }}
+        </ion-card-title>
+
+         <p> Data: {{user.data | date:'dd-MM-yyyy'}}</p>
+         <p>{{user.detalhe }}</p>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="paginaAtu < totalPaginas">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Processando..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>
